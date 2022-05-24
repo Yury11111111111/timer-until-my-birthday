@@ -8,10 +8,10 @@ function App() {
 
   const [time, setTime] = useState(~~((date - dateNow) / 1000));
 
-  const days = Math.floor(time / 3600 / 24)
-  const hours = Math.floor(days / 24);
-  const minuts = Math.floor((time - hours * 3600 - days * 3600 * 24) / 60);
-  const seconds = time - hours * 3600 - minuts * 60 - days * 3600 * 24;
+  const days = Math.floor(time / (60 * 60 * 24))
+  const hours = Math.floor((time / (60 * 60)) % 24);
+  const minuts = Math.floor((time / 60) % 60);
+  const seconds = time % 60;
 
   const interval = setInterval(() => {
     setDateNow(Date.now());
