@@ -17,11 +17,11 @@ function App() {
     setDateNow(Date.now());
     clearInterval(interval)
     setTime(~~((date - dateNow) / 1000));
-  }, 1000);
+  }, 990);
 
   return (
     <div className="App">
-      <h1>До моего дня рожния осталось</h1>
+      <h1>До моего дня рождения осталось</h1>
       {days} : {hours} : {minuts} : {seconds}
     </div>
   );
